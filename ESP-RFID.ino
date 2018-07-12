@@ -42,7 +42,7 @@ uint32_t ID_active=0;
 void prepare_data(uint32_t ID, uint32_t VENDOR){
   value[0] = (VENDOR>>4) & 0XF;
   value[1] = VENDOR & 0XF;
-  for (int i=1; i<8; i++){
+  for (int i=0; i<8; i++){
     value[i+2] = (ID>>(28-i*4)) &0xF;
   }
 
